@@ -1,0 +1,15 @@
+eureka:
+  instance:
+    ip-address: 127.0.0.1
+#    hostname: localhost
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    registry-fetch-interval-seconds: 10
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+
+
+

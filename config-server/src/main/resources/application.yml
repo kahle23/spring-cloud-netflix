@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kahlkn/config-repo
+          username:
+          password:
+          # Profiles for multiple services are under the same repository
+          # Placeholder "{application}" equivalently client "spring.cloud.config.name" or "spring.application.name"
+          # Symbol "'" because of a yml file syntax problem
+          search-paths: '{application}'
+          basedir: /temp/config
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+
+
