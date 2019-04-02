@@ -1,0 +1,41 @@
+server:
+  servlet:
+    session:
+      timeout: 30M
+  tomcat:
+    min-spare-threads: 5
+    max-threads: 300
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  thymeleaf:
+    mode: HTML5
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 2000
+    max-connections-per-route: 300
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    root: info
+
+
+

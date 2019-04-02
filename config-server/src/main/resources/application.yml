@@ -3,14 +3,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kahlkn/config-repo
-          username:
-          password:
+          uri: https://git/config
           # Profiles for multiple services are under the same repository
           # Placeholder "{application}" equivalently client "spring.cloud.config.name" or "spring.application.name"
           # Symbol "'" because of a yml file syntax problem
           search-paths: '{application}'
           basedir: /temp/config
+#          username:
+#          password:
+#          ignore-local-ssh-settings: true
+#          private-key:
 
 logging:
   level:

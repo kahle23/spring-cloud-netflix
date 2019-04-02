@@ -1,4 +1,1 @@
-java -jar eureka-server.jar --server.port=8761 --eureka.instance.ip-address=127.0.0.1 --spring.application.name=eureka-server --spring.cloud.config.enabled=false --spring.cloud.config.discovery.enabled=false --spring.cloud.config.discovery.service-id=config-server --eureka.client.service-url.defaultZone=http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8761/eureka/
-
-
-
+java -jar eureka-server.jar --server.port=8761 --spring.application.name=eureka-server --spring.cloud.config.enabled=false --spring.cloud.config.discovery.enabled=false --spring.cloud.config.discovery.service-id=config-server --eureka.instance.ip-address=192.168.168.1 --eureka.client.service-url.defaultZone=http://127.0.0.2:8761/eureka/,http://127.0.0.3:8761/eureka/

@@ -4,13 +4,15 @@ server:
 spring:
   application:
     name: eureka-server
+  profiles:
+    active: default
   cloud:
     config:
       enabled: false
-#      uri: http://localhost:8888
+#      uri: http://127.0.0.1:8888
       label: master
 #      name: eureka-server
-      profile: dev
+#      profile: default
       fail-fast: true
       discovery:
         enabled: false

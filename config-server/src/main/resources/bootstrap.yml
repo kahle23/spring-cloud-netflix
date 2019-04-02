@@ -4,12 +4,19 @@ server:
 spring:
   application:
     name: config-server
+  profiles:
+    active: default
 
 eureka:
+  instance:
+    # Use the IP of this service when registering.
+    prefer-ip-address: true
+#    hostname: localhost
+#    ip-address: 127.0.0.1
   client:
     registry-fetch-interval-seconds: 10
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka/
 
 
 
