@@ -34,8 +34,11 @@ feign:
     enabled: true
 
 logging:
+  config: classpath:logback.xml
   level:
     root: info
+    com.netflix.discovery: off
+#    org.springframework.cloud: info
 
 
 

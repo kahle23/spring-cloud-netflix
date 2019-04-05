@@ -19,9 +19,11 @@ spring:
 #          private-key:
 
 logging:
+  config: classpath:logback.xml
   level:
-    com.netflix.discovery: 'OFF'
-    org.springframework.cloud: 'DEBUG'
+    root: info
+    com.netflix.discovery: off
+#    org.springframework.cloud: info
 
 
 

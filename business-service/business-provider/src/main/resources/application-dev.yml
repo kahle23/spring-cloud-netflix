@@ -26,8 +26,11 @@ spring:
       config: classpath:ehcache.xml
 
 logging:
+  config: classpath:logback.xml
   level:
     root: info
+    com.netflix.discovery: off
+#    org.springframework.cloud: info
 
 
 
