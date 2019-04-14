@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kahlkn</groupId>
     <artifactId>business-service</artifactId>
-    <version>0.0.1.beta</version>
+    <version>1.0.0.RELEASE</version>
     <packaging>pom</packaging>
     <name>Business Service</name>
     <url>https://github.com/kahlkn/spring-cloud-component</url>
     <description>Business service project.</description>
 
-	<modules>
-		<module>business-api</module>
-		<module>business-provider</module>
+    <modules>
+        <module>business-api</module>
+        <module>business-provider</module>
     </modules>
 
 </project>

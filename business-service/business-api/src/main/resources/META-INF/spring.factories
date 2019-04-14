@@ -1,6 +1,6 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-business.service.fallback.HelloClientHystrix,\
-business.service.fallback.TestClientHystrix
+service.api.business.fallback.HelloClientHystrix,\
+service.api.business.fallback.TimeClientHystrix
 
 
 
