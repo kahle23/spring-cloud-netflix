@@ -1,0 +1,34 @@
+#info:
+#  component: Zuul Server
+#
+#endpoints:
+#  restart:
+#    enabled: true
+#  shutdown:
+#    enabled: true
+#  health:
+#    sensitive: false
+
+zuul:
+  routes:
+    stores: /stores/**
+    customers: /customers/**
+    zuulserver: /self/**
+    api-a:
+      path: /api-user/**
+      service-id: service-provider
+      sensitive-headers:
+    api-b:
+      path: /api-order/**
+      service-id: service-consumer
+
+logging:
+  config: classpath:logback-spring.xml
+  home: /tmp/logs/
+  level:
+    root: info
+    com.netflix.discovery: off
+#    org.springframework.cloud: info
+
+
+
