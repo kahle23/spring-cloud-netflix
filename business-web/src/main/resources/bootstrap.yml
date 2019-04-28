@@ -20,6 +20,8 @@ eureka:
 #    ip-address: 127.0.0.1
   client:
     registry-fetch-interval-seconds: 10
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://root:root@127.0.0.1:8761/eureka/
 

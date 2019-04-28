@@ -20,9 +20,11 @@ spring:
       password: root
 
 logging:
-  config: classpath:logback.xml
+  config: classpath:logback-spring.xml
+  home: /tmp/logs/
   level:
     root: info
+    com.netflix.discovery: off
 #    org.springframework.cloud: info
 
 

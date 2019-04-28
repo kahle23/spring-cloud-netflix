@@ -48,7 +48,7 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!--You need to be running rabbitmq locally. This is to support broadcast of config changes to client apps via Spring Cloud Stream. If you want to play and don't need that feature just comment out the monitor and rabbitmq dependencies.-->
+        <!-- You need to be running rabbitmq locally. This is to support broadcast of config changes to client apps via Spring Cloud Stream. If you want to play and don't need that feature just comment out the monitor and rabbitmq dependencies. -->
 
         <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
