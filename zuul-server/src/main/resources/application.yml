@@ -1,26 +1,26 @@
-#info:
-#  component: Zuul Server
-#
-#endpoints:
-#  restart:
-#    enabled: true
-#  shutdown:
-#    enabled: true
-#  health:
-#    sensitive: false
-
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  sensitive-headers:
+  prefix: /api
   routes:
-    stores: /stores/**
-    customers: /customers/**
-    zuulserver: /self/**
-    api-a:
-      path: /api-user/**
-      service-id: service-provider
-      sensitive-headers:
-    api-b:
-      path: /api-order/**
-      service-id: service-consumer
+    member:
+      path: /member/**
+      serviceId: member-soa
+#      url: https://admin.eggxiaoer.net/api/member/
+    trade:
+      path: /trade/**
+      serviceId: trade-soa
+#      url: https://admin.eggxiaoer.net/api/trade/
+    basic:
+      path: /basic/**
+      serviceId: basic-soa
+#      url: https://admin.eggxiaoer.net/api/basic/
+
+ribbon:
+  read-timeout: 60000
+  connect-timeout: 60000
 
 logging:
   config: classpath:logback-spring.xml
@@ -29,6 +29,7 @@ logging:
     root: info
     com.netflix.discovery: off
 #    org.springframework.cloud: info
+
 
 
 

@@ -1,11 +1,13 @@
 server:
-  port: 5555
+  port: 8868
 
 spring:
   application:
     name: zuul-server
   profiles:
     active: default
+#  main:
+#    allow-bean-definition-overriding: true
   cloud:
     config:
       enabled: false
