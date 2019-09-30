@@ -1,7 +1,12 @@
 zuul:
   host:
-    connect-timeout-millis: 10000
+    time-to-live: -1
+    connect-timeout-millis: 30000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
     socket-timeout-millis: 60000
+  semaphore:
+    max-semaphores: 500
   sensitive-headers:
   prefix: /api
   routes:
@@ -19,8 +24,16 @@ zuul:
 #      url: https://admin.eggxiaoer.net/api/basic/
 
 ribbon:
-  read-timeout: 60000
-  connect-timeout: 60000
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000
 
 logging:
   config: classpath:logback-spring.xml
