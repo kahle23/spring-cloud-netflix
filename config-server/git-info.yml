@@ -5,6 +5,7 @@ spring:
         git:
           uri: git@github.com:kahlkn/spring-cloud-component.git
           search-paths: 'config-repo/{application}'
+          force-pull: true
           ignore-local-ssh-settings: true
           private-key: |
                          -----BEGIN RSA PRIVATE KEY-----
